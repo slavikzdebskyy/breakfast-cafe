@@ -1,0 +1,24 @@
+<div class="follow-gallery-container" *ngIf="gallery.length">
+	<div class="control">
+		<mat-icon class="x-mark" svgIcon="x-mark-bold" routerLink = '/home'></mat-icon>
+		<mat-icon svgIcon="right" (click)="nextPrevSlide(1)"></mat-icon>
+	</div>
+	<img [src]="'assets/'+gallery[index].image" alt="">
+	<div class="title">
+		<div>
+			<span>{{gallery[index].likes}}</span>
+		</div>
+		<div>
+			<span>{{gallery[index].messages.length}}</span><mat-icon svgIcon="message"></mat-icon>
+		</div>
+		<ul *ngIf="gallery[index].messages.length">
+			<li>Comments:</li>
+			<li *ngFor="let msg of gallery[index].messages">
+				# {{msg}}
+			</li>
+		</ul>			
+	</div>
+	<div class="control">
+			<mat-icon svgIcon="left" (click)="nextPrevSlide(-1)"></mat-icon>
+	</div>
+</div>

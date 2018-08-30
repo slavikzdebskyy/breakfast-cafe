@@ -1,0 +1,53 @@
+.follow-gallery-container
+	width: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+	position: relative
+	.control
+		display: flex
+		justify-content: center
+		flex-direction: column
+		align-items: center
+		width: 50px
+		min-height: 500px
+		color: #737373
+		position: absolute
+		top: 0
+		right: 0
+		&:last-child
+			left: 0
+		mat-icon
+			cursor: pointer
+			transition: .4s
+			width: 30px
+			height: 30px
+			&:hover
+				color: #ffcb53
+			&.x-mark
+				position: absolute
+				top: 10%
+	img
+		max-width: 450px
+	.title
+		width: 300px
+		margin-left: 10px
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		font-family: 'Roboto', sans-serif
+		div
+			margin: 15px
+			span
+				margin: 0 20px 0
+				font-size: 20px
+		ul
+			list-style: none
+			margin: 0
+			padding: 0
+			line-height: 1.5
+			li
+				padding: 10px 15px 10px
+				font-size: 14px
+				&:nth-child(2n)
+					background: #f2f2f2

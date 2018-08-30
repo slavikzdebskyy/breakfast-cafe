@@ -1,0 +1,10 @@
+<div [class]="containerClass" *ngIf="isOpenedMenu">	
+			<mat-icon svgIcon="x-mark" (click)="closeMenu()"></mat-icon>	
+	<ul>
+		<li>Home</li>
+		<li>Our Story</li>
+		<li>Menu</li>
+		<li>Contact</li>
+	</ul>
+</div>
+<app-left-tool-bar (isOpenedMenu)="getIsOpenedMenuValue($event)"></app-left-tool-bar>

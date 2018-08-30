@@ -1,0 +1,99 @@
+<div class="home-container">
+	<!-- WARNING -->
+	<div class="warning" *ngIf="isWarningVisible">
+		<span>Site in the development process</span>
+		<span class="stop" (click)="warning()">X</span>
+	</div>
+	<!-- WARNING -->
+	<h3>
+		White & Yellow		
+	</h3>
+	<h1>
+			The best place to kick off your day or just take a break and enjoy a 
+			<span>
+				yummy breakfast
+			</span>
+	</h1>
+	<div class="row">
+		<div class="gallery">
+			<img class="album" src="assets/1387048107991.jpeg" alt="food-gallery">
+		</div>
+		<div class="gallery">
+			<img class="portrait" src="assets/DD-486-ketomackerel.jpg" alt="food-gallery">
+		</div>
+	</div>
+	<div class="row">
+			<div class="gallery">
+				<h2>
+					Our Special for <br>
+					Today - Breakfast! <br>
+					All Day. Every Day
+				</h2>
+			</div>
+			<div class="gallery">
+				<img class="portrait" src="assets/Magic-Coffee-Breakfast-Thieves.jpg" alt="food-gallery">
+			</div>
+		</div>
+		<div class="row">
+			<div class="gallery">
+				<img class="album" src="assets/roasted-nut-muesli.jpg" alt="food-gallery">
+			</div>
+			<div class="gallery">
+				<img class="portrait" src="assets/slider-food-3.jpg" alt="food-gallery">
+			</div>
+		</div>
+		<div class="row">
+			<div class="gallery">
+				<img class="portrait" src="assets/whitney-wright-356665-e1511435712954.jpg" alt="food-gallery">
+			</div>
+			<div class="gallery">
+				<img class="album" src="assets/tomato-avocado-scrambled-eggs-1.jpg" alt="food-gallery">
+			</div>			
+		</div>
+		<div class="row follow">
+			<span class="khech">
+					Follow Us
+			</span>
+			<h2>
+				<span>
+					#white&yellow
+				</span>					
+			</h2>
+			<div class="gallery-container" *ngIf="followGallery.length">
+				<div 	class="gallerry-item"
+							*ngFor="let item of followGallery; let i = index"
+							routerLink = '/gallery/{{i}}'>
+					<img [src]="'assets/follow-us/'+item.image" alt="follow-us">
+					<div class="info">
+					<mat-icon svgIcon="like"></mat-icon><span>{{item.likes}}</span>
+					<mat-icon svgIcon="message"></mat-icon><span>{{item.messages.length}}</span>
+					</div>
+				</div>
+			</div>			
+		</div><!-- row follow -->
+		<div class="row contacts">
+				<h3>
+					White & Yellow		
+				</h3>
+				<ul>
+					<li>500 Terry Francois Street</li>
+					<li>San Francisco, CA 94158</li>
+					<li>Tel: 123-456-7890</li>
+				</ul>
+				<ul>
+					<li>Mon - Fri: 7am - 10pm</li>
+					<li>Saturday: 8am - 11pm</li>
+					<li>Sunday: 8am - 10pm</li>
+				</ul>
+				<form action="#">
+					<span>
+							Let's be friends and have eggs benedict
+					</span>
+					<div>
+						<input type="text" placeholder="Email Address">
+						<input type="submit" value="Subscribe">
+					</div>					
+				</form>
+		</div><!-- row contacts -->	
+</div> <!-- home-container -->
+
