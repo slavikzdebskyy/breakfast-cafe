@@ -1,9 +1,9 @@
 <div [class]="containerClass" *ngIf="isOpenedMenu">	
 			<mat-icon svgIcon="x-mark" (click)="closeMenu()"></mat-icon>	
 	<ul>
-		<li>Home</li>
+		<li (click)="home()">Home</li>
 		<li>Our Story</li>
-		<li>Menu</li>
+		<li (click)="menu()">Menu</li>
 		<li>Contact</li>
 	</ul>
 </div>

@@ -14,10 +14,15 @@ import { LeftToolBarComponent } from './main/left-tool-bar/left-tool-bar.compone
 import { RightToolBarComponent } from './main/right-tool-bar/right-tool-bar.component';
 import { NavMenuBarComponent } from './main/nav-menu-bar/nav-menu-bar.component';
 import { HomeComponent } from './home/home.component';
-
+import { FollowGalleryComponent } from './home/follow-gallery/follow-gallery.component';
+import { MenuComponent } from './menu/menu.component';
 
 import { FollowService } from './services/follow.service';
-import { FollowGalleryComponent } from './home/follow-gallery/follow-gallery.component';
+import { MenuService } from 'src/app/services/menu.service';
+import { SubscribeComponent } from './subscribe/subscribe.component';
+
+
+
 
 
 
@@ -29,7 +34,9 @@ import { FollowGalleryComponent } from './home/follow-gallery/follow-gallery.com
     RightToolBarComponent,
     NavMenuBarComponent,
     HomeComponent,
-    FollowGalleryComponent
+    FollowGalleryComponent,
+    MenuComponent,
+    SubscribeComponent
   ],
   imports: [
 		BrowserModule,
@@ -39,7 +46,7 @@ import { FollowGalleryComponent } from './home/follow-gallery/follow-gallery.com
 		HttpClientModule,
 		RouterModule.forRoot(Routers),
   ],
-  providers: [FollowService],
+  providers: [FollowService, MenuService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

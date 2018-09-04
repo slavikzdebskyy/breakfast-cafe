@@ -1,0 +1,93 @@
+<div class="menu-container">
+	<h3  routerLink = '/home'>
+		White & Yellow		
+	</h3>
+	<h4>
+		Served All Day Everyday Since 2015
+	</h4>
+	<p>
+		I’m a menu description. Click me and then “Edit Menu” to open the Restaurant Menu editor and change my text.
+	</p>
+	<div class="menu-category">
+		<h2>
+			Bre<span>akf</span>ast
+		</h2>
+		<div class="menu-item" *ngFor="let breakfast of menu.breakfast">
+			<span class="name">
+				{{breakfast.name}}
+			</span>
+			<p>
+				{{breakfast.description}}
+			</p>
+			<ul class="tastes" *ngIf="breakfast.tastes.length">
+				<li *ngFor="let b_tast of breakfast.tastes">
+					<span>{{b_tast.name}}</span>
+					<span>${{b_tast.price}}</span>
+				</li>
+			</ul>
+			<span class="price" *ngIf="breakfast.price>0">
+				${{breakfast.price}}
+			</span>
+			<ul class="other" *ngIf="breakfast.other.length">
+				<li *ngFor="let b_el of breakfast.other">
+					{{b_el}}
+				</li>
+			</ul>
+		</div><!-- menu-item -->
+	</div><!-- menu-category -->	
+	<div class="menu-category">
+		<h2>
+				Pastrie<span>s & C</span>akes
+		</h2>
+		<div class="menu-item" *ngFor="let cake of menu.cakes">
+			<span class="name">
+				{{cake.name}}
+			</span>
+			<p>
+				{{cake.description}}
+			</p>
+			<ul class="tastes" *ngIf="cake.tastes.length">
+				<li *ngFor="let c_tast of cake.tastes">
+					<span>{{c_tast.name}}</span>
+					<span>${{c_tast.price}}</span>
+				</li>
+			</ul>
+			<span class="price" *ngIf="cake.price>0">
+				${{cake.price}}
+			</span>
+			<ul class="other" *ngIf="cake.other.length">
+				<li *ngFor="let c_el of cake.other">
+					{{c_el}}
+				</li>
+			</ul>
+		</div><!-- menu-item -->
+	</div><!-- menu-category -->	
+	<div class="menu-category">
+		<h2>
+				D<span>rin</span>ks
+		</h2>
+		<div class="menu-item" *ngFor="let drink of menu.drinks">
+			<span class="name">
+				{{drink.name}}
+			</span>
+			<p>
+				{{drink.description}}
+			</p>
+			<ul class="tastes" *ngIf="drink.tastes.length">
+				<li *ngFor="let d_tast of drink.tastes">
+					<span>{{d_tast.name}}</span>
+					<span>${{d_tast.price}}</span>
+				</li>
+			</ul>
+			<span class="price" *ngIf="drink.price>0">
+				${{drink.price}}
+			</span>
+			<ul class="other" *ngIf="drink.other.length">
+				<li *ngFor="let d_el of drink.other">
+					{{d_el}}
+				</li>
+			</ul>
+		</div><!-- menu-item -->
+	</div><!-- menu-category -->
+	<app-subscribe></app-subscribe>
+</div><!-- menu-container -->

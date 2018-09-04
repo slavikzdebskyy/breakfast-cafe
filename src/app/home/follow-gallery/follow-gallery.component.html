@@ -2,7 +2,7 @@
 	<div class="control">
 		<mat-icon class="x-mark" svgIcon="x-mark-bold" routerLink = '/home'></mat-icon>
 		<mat-icon svgIcon="right" (click)="nextPrevSlide(1)"></mat-icon>
-	</div>
+	</div><!-- control -->
 	<img [src]="'assets/'+gallery[index].image" alt="">
 	<div class="title">
 		<div>
@@ -17,8 +17,9 @@
 				# {{msg}}
 			</li>
 		</ul>			
-	</div>
+	</div><!-- title -->
 	<div class="control">
 			<mat-icon svgIcon="left" (click)="nextPrevSlide(-1)"></mat-icon>
-	</div>
-</div>
+	</div><!-- control -->
+</div><!-- follow-gallery-container -->
+
